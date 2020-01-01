@@ -41,7 +41,7 @@ const Directory: React.FC = () => {
 
 	return (
 		<div className="directory-menu">
-			{sections.map(({ title, imageUrl, id }) => <MenuItem key={id} title={title} />)}
+			{sections.map(({ id, ...otherProps }) => <MenuItem key={id} {...otherProps} />)}
 		</div>
 	);
 };
